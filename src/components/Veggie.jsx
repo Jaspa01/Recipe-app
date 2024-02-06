@@ -38,7 +38,7 @@ const Veggie = () => {
             arrows: true,
             pagination: true,
             drag: "free",
-            gap: "2rem",
+            gap: "2.0rem",
           }}
         >
           {veggie.map((recipe) => {
@@ -87,7 +87,7 @@ const Card = styled.div`
     z-index: 10;
     left: 50%;
     bottom: 0%;
-    transform: translate(-50%, 0%);
+    transform: translate(-50%, -50%);
     color: white;
     width: 100%;
     text-align: center;
@@ -101,7 +101,6 @@ const Card = styled.div`
 
   @media ${device.mobileL} {
     p {
-      transform: translate(-50%, -50%);
       font-weight: 500;
       font-size: 13px;
     }
