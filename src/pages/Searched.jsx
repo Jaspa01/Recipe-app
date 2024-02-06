@@ -53,7 +53,7 @@ const Card = styled.div`
   }
   h4 {
     text-align: center;
-    padding: 1rem;
+    padding: 1.0rem;
   }
 `;
 

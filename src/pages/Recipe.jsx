@@ -14,7 +14,6 @@ const Recipe = () => {
     );
     const detailData = await data.json();
     setDetails(detailData);
-    console.log(detailData);
   };
 
   useEffect(() => {
@@ -33,7 +32,7 @@ const Recipe = () => {
             className={activeButton === "information" ? "active" : ""}
             onClick={() => setActiveButton("information")}
           >
-            Details
+            Information
           </Button>
           <Button
             className={activeButton === "instructions" ? "active" : ""}

@@ -15,14 +15,15 @@ const Category = () => {
         <FaPizzaSlice />
         <h4>Italian</h4>
       </Link>
-      <Link to={"/cuisine/Japanese"}>
-        <GiChopsticks />
-        <h4>Japanese</h4>
-      </Link>
       <Link to={"/cuisine/Thai"}>
         <GiNoodles />
         <h4>Thai</h4>
       </Link>
+      <Link to={"/cuisine/Japanese"}>
+        <GiChopsticks />
+        <h4>Japanese</h4>
+      </Link>
+      
     </List>
   );
 };
