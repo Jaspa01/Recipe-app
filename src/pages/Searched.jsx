@@ -13,10 +13,12 @@ const Searched = () => {
     );
     const recipes = await data.json();
     setSearchedRecipes(recipes.results);
+    console.log(recipes.results);
   };
 
   useEffect(() => {
     getSearched(params.search);
+    console.log(params.search)
   }, [params.search]);
 
   return (
@@ -38,7 +40,7 @@ const Searched = () => {
 const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  grid-gap: 5rem;
+  grid-gap: 3rem;
 `;
 
 const Card = styled.div`

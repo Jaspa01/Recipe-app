@@ -1,5 +1,4 @@
 import Popular from "../components/Popular";
-import Search from "../components/Search";
 import Veggie from "../components/Veggie";
 import { motion } from "framer-motion";
 

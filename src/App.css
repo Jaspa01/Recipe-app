@@ -1,0 +1,16 @@
+body {
+  background-color: #f5fffc;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.pages {
+  margin: 0% 7%;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+}

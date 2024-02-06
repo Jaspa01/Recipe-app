@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { FaSearch } from "react-icons/fa";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { device } from "../breakpoints";
 
 const Search = () => {
   const [input, setInput] = useState("");
@@ -14,12 +14,12 @@ const Search = () => {
 
   return (
     <FormStyle onSubmit={searchHandler}>
-      <div>
-        {/* <FaSearch></FaSearch> */}
+      <div className="input">
         <input
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
+          placeholder="search recipes..."
         />
       </div>
     </FormStyle>
@@ -27,7 +27,6 @@ const Search = () => {
 };
 
 const FormStyle = styled.form`
-  margin: 0rem 20rem;
   position: relative;
 
   div {
@@ -36,25 +35,31 @@ const FormStyle = styled.form`
   }
 
   input {
-    border: none;
     font-size: 1.5rem;
-    color: white;
-    padding: 1rem 3rem;
-    border: none;
-    border-radius: 1rem;
+    color: #313131;
+    padding: 0.7rem 1.5rem;
+    border-radius: 10px;
+    border: 1px solid #15a17a;
     outline: none;
+    max-width: 500px;
     width: 100%;
-    background: linear-gradient(35deg, #494949, #313131);
+    background: #dde2e74e;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
   }
-  svg {
-    top: 50px;
-    margin-top: 3rem;
-    left: 0%;
-    transform: translate(100%, -50%);
-    color: #494949;
-    font-size: 3rem;
-    cursor: pointer;
-    positon: absolute;
+
+  @media ${device.mobileL} {
+    input {
+      width: 90%;
+      margin: 0 auto;
+      padding: 0.4rem 1rem;
+      font-size: 15px;
+
+      &::placeholder {
+        font-size: 15px;
+      }
+    }
   }
 `;
 

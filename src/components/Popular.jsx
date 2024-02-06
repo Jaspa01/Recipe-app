@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-// import "@splidejs/splide/css";
-// import "@splidejs/react-splide/css";
 import "@splidejs/splide/dist/css/splide.min.css";
 import { Link } from "react-router-dom";
+import { device } from "../breakpoints";
 
 const Popular = () => {
   const [popular, setPopular] = useState([]);
@@ -39,7 +38,7 @@ const Popular = () => {
             arrows: true,
             pagination: false,
             drag: "free",
-            gap: "2rem",
+            gap: "10px",
           }}
         >
           {popular.map((recipe) => {
@@ -77,6 +76,7 @@ const Card = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
+
   }
 
   p {
@@ -95,6 +95,13 @@ const Card = styled.div`
     justify-content: center;
     align-items: center;
   }
+
+  @media ${device.mobileL} {
+    p {
+      transform: translate(-50%, -50%);
+      font-weight: 600;
+      font-size: 13px;
+    }
 `;
 
 const Gradient = styled.div`

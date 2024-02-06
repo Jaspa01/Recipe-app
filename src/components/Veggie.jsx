@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-// import "@splidejs/splide/css";
-// import "@splidejs/react-splide/css";
 import "@splidejs/splide/dist/css/splide.min.css";
 import { Link } from "react-router-dom";
+import { device } from "../breakpoints";
 
 const Veggie = () => {
   const [veggie, setVeggie] = useState([]);
@@ -39,7 +38,7 @@ const Veggie = () => {
             arrows: true,
             pagination: true,
             drag: "free",
-            gap: "5rem",
+            gap: "2rem",
           }}
         >
           {veggie.map((recipe) => {
@@ -63,6 +62,10 @@ const Veggie = () => {
 
 const Wrapper = styled.div`
   margin: 4rem 0rem;
+
+  @media ${device.mobileL} {
+    margin: 2.5rem 0rem;
+  }
 `;
 
 const Card = styled.div`
@@ -94,6 +97,14 @@ const Card = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  @media ${device.mobileL} {
+    p {
+      transform: translate(-50%, -50%);
+      font-weight: 500;
+      font-size: 13px;
+    }
   }
 `;
 

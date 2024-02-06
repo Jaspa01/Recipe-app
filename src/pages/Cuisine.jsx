@@ -17,7 +17,6 @@ const Cuisine = () => {
 
   useEffect(() => {
     getCuisine(params.type);
-    console.log(params.type);
   }, [params.type]);
 
   return (
@@ -43,7 +42,7 @@ const Cuisine = () => {
 
 const Grid = styled(motion.div)`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   grid-gap: 5rem;
 `;
 
@@ -60,31 +59,5 @@ const Card = styled.div`
     padding: 1rem;
   }
 `;
-
-// const Grid = styled.div`
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   text-align:center;
-//   flex-wrap:wrap;
-//   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-//   grid-gap: 1.5rem;
-// `;
-
-// const Card = styled.div`
-
-//   img {
-//     width: 13rem;
-//     border-radius: 2rem;
-//   }
-//   a {
-//     text-decoration: none;
-//   }
-//   h4 {
-//     text-align: center;
-//     padding: 1rem;
-//     max-width: 14rem;
-//   }
-// `;
 
 export default Cuisine;
