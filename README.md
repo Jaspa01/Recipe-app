@@ -1,6 +1,6 @@
 # Recipe-app
 
-This project was created with React.js and Spoonacular Food API
+This project was created with React.js, Spoonacular Food API and Framer motion.
 
 It was styled with React Styled Components
 
